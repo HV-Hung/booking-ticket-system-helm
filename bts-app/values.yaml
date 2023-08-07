@@ -1,0 +1,30 @@
+# app-chart/values.yaml
+replicaCount: 1
+app:
+  name: bts
+  version: 1.0
+
+image:
+  repository: hung6876/bts
+  tag: d79f4ab
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  annotations: {}
+  path: /
+  hosts:
+    - nest-app.local
+  tls: []
+
+env:
+  JWT_SECRET: $2a$10$KKogmlfxOvj0kqznAxgCtu1fNTOV2D3vP9n.ydlyjeHJiR4fWY882
+  DB_HOST: postgres-postgresql.database.svc.cluster.local
+  DB_USER: postgres
+  DB_PW: CBP9uQQXTu
+  DB_PORT: 5432
+  ORIGINS: http://localhost:3000
