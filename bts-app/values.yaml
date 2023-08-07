@@ -22,9 +22,9 @@ ingress:
   tls: []
 
 env:
-  JWT_SECRET: $2a$10$KKogmlfxOvj0kqznAxgCtu1fNTOV2D3vP9n.ydlyjeHJiR4fWY882
+  JWT_SECRET: 
   DB_HOST: postgres-postgresql.database.svc.cluster.local
   DB_USER: postgres
-  DB_PW: CBP9uQQXTu
+  DB_PW: 
   DB_PORT: 5432
   ORIGINS: http://localhost:3000
